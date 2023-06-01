@@ -32,12 +32,12 @@ public class MetaCrypto
         return JsonSerializer.Serialize(encryptedPayload);
     }
 
-    public string Decrypt(string password, string text)
+    public string Decrypt(string password, string payload)
     {
-        Assert.NotNull(text);
+        Assert.NotNull(payload);
 
-        var payload = JsonSerializer.Deserialize<Payload>(text);
-        return DecryptWithPayload(password, payload);
+        var payloadObj = JsonSerializer.Deserialize<Payload>(payload);
+        return DecryptWithPayload(password, payloadObj);
     }
 
     public string Decrypt(string password, string data, string iv, string salt)
@@ -76,18 +76,17 @@ public class MetaCrypto
     }
 
 
-    public string ToMnemonic(byte[] mnemonic)
+    public string MnemonicBytesToString(byte[] mnemonic)
     {
         Assert.NotNull(mnemonic);
 
         return Encoding.UTF8.GetString(mnemonic);
     }
 
-    public string ToMnemonic(IEnumerable<byte> mnemonic)
+    public string MnemonicBytesToString(IEnumerable<byte> mnemonic)
     {
         Assert.NotNull(mnemonic);
 
-        return ToMnemonic(mnemonic.ToArray());
+        return MnemonicBytesToString(mnemonic.ToArray());
     }
-
 }
