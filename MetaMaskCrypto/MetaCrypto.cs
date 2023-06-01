@@ -90,5 +90,4 @@ public class MetaCrypto
         return ToMnemonic(mnemonic.ToArray());
     }
 
-
 }
