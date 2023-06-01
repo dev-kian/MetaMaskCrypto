@@ -13,4 +13,11 @@ internal class Payload
     [JsonPropertyName("salt")]
     [JsonInclude]
     public string Salt { get; private set; }
+
+    public Payload(string data, string iv, string salt)
+    {
+        Data = data;
+        IV = iv;
+        Salt = salt;
+    }
 }
