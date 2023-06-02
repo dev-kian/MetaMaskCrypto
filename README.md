@@ -9,7 +9,7 @@ MetaMaskCrypto is a C# library that provides functionality for decrypting vaults
 ## Features
 
 - Decryption of MetaMask vaults
-- Retrieval of encrypted private keys and other sensitive information
+- Retrieval of encrypted mnemonic phrase and other sensitive information
 
 ## Installation
 
