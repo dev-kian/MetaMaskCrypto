@@ -4,7 +4,20 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>MetaMask Vault Decryptor Library for C#</Title>
+    <PackageIcon>MetaMask_Fox.svg.png</PackageIcon>
+    <Description>The MetaMask Valut Decryptor Library for C# is a powerful and user-friendly tool designed to facilitate the decryption of values stored in the MetaMask wallet. With this library, developers can easily integrate MetaMask decryption functionality into their C# applications</Description>
+    <PackageTags>Metamask, MatamaskCrypto, MetamaskVaultDecryptor, Vault Decryptor</PackageTags>
+    <RepositoryUrl>https://github.com/dev-kian/MetaMaskCrypto</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\MetaMask_Fox.svg.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
