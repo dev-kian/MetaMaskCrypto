@@ -102,7 +102,11 @@ public class MetaCrypto
         }
     }
 
-
+    /// <summary>
+    /// Converts a byte array representing mnemonic to a string.
+    /// </summary>
+    /// <param name="mnemonic">The byte array representing the mnemonic.</param>
+    /// <returns>The mnemonic as a string.</returns>
     public string MnemonicBytesToString(byte[] mnemonic)
     {
         Assert.NotNull(mnemonic);
@@ -110,6 +114,11 @@ public class MetaCrypto
         return Encoding.UTF8.GetString(mnemonic);
     }
 
+    /// <summary>
+    /// Converts an enumerable of bytes representing mnemonic to a string.
+    /// </summary>
+    /// <param name="mnemonic">The enumerable of bytes representing the mnemonic.</param>
+    /// <returns>The mnemonic as a string.</returns>
     public string MnemonicBytesToString(IEnumerable<byte> mnemonic)
     {
         Assert.NotNull(mnemonic);
