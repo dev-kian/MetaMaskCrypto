@@ -45,6 +45,12 @@ public class MetaCrypto
         return JsonSerializer.Serialize(encryptedPayload);
     }
 
+    /// <summary>
+    /// Decrypts the payload string using the specified password.
+    /// </summary>
+    /// <param name="password">The password used for decryption.</param>
+    /// <param name="payload">The encrypted payload as a string.</param>
+    /// <returns>The decrypted payload as a string.</returns>
     public string Decrypt(string password, string payload)
     {
         Assert.NotNull(payload);
@@ -53,6 +59,14 @@ public class MetaCrypto
         return DecryptWithPayload(password, payloadObj);
     }
 
+    /// <summary>
+    /// Decrypts the payload string using the specified password, data, IV, and salt.
+    /// </summary>
+    /// <param name="password">The password used for decryption.</param>
+    /// <param name="data">The encrypted data to be decrypted.</param>
+    /// <param name="iv">The initialization vector used for decryption.</param>
+    /// <param name="salt">The salt used for key derivation.</param>
+    /// <returns>The decrypted payload as a string.</returns>
     public string Decrypt(string password, string data, string iv, string salt)
     {
         var payload = new Payload(data, iv, salt);
