@@ -6,6 +6,13 @@ namespace MetaMaskCrypto;
 
 public class MetaCrypto
 {
+    /// <summary>
+    /// Encrypts the payload object using the specified password.
+    /// </summary>
+    /// <typeparam name="T">The type of the payload object.</typeparam>
+    /// <param name="password">The password used for encryption.</param>
+    /// <param name="payload">The object to be encrypted.</param>
+    /// <returns>The encrypted payload as a string.</returns>
     public string Encrypt<T>(string password, T payload)
     {
         Assert.NotNull(payload);
@@ -13,6 +20,12 @@ public class MetaCrypto
         return Encrypt(password, JsonSerializer.Serialize(payload));
     }
 
+    /// <summary>
+    /// Encrypts the payload string using the specified password.
+    /// </summary>
+    /// <param name="password">The password used for encryption.</param>
+    /// <param name="payload">The string to be encrypted.</param>
+    /// <returns>The encrypted payload as a string.</returns>
     public string Encrypt(string password, string payload)
     {
         Assert.NotNull(password);
