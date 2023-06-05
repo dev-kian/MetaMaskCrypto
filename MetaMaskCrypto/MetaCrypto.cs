@@ -45,6 +45,7 @@ public class MetaCrypto
         return JsonSerializer.Serialize(encryptedPayload);
     }
 
+
     /// <summary>
     /// Decrypts the payload string using the specified password.
     /// </summary>
@@ -102,6 +103,7 @@ public class MetaCrypto
         }
     }
 
+
     /// <summary>
     /// Converts a byte array representing mnemonic to a string.
     /// </summary>
@@ -125,4 +127,5 @@ public class MetaCrypto
 
         return MnemonicBytesToString(mnemonic.ToArray());
     }
+
 }
